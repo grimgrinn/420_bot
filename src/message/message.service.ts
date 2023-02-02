@@ -13,5 +13,9 @@ export class MessageService {
   findAll(): Promise<Message[]> {
     return this.messageRepository.find();
   }
+
+  findOne(id: number): Promise<Message> {
+    return this.messageRepository.findOneBy({ id });
+  }
   
 }
